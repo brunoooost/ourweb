@@ -10,7 +10,7 @@ function calculateDays() {
 function displayDaysCounter() {
     const counterElement = document.getElementById('daysCounter');
     const days = calculateDays();
-    counterElement.textContent = `${days} days since July 8th`;
+    counterElement.textContent = `${days} dias`;
 }
 
 // Animate timeline items on scroll
