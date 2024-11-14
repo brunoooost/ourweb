@@ -126,6 +126,21 @@ p {
     color: #555;
 }
 
+/* Hide Images Initially */
+.timeline-image {
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.timeline-item.active .timeline-image {
+    display: block;
+    opacity: 1;
+}
+
 /* Central Counter */
 .days-counter {
     position: fixed;
