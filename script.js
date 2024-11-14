@@ -10,7 +10,7 @@ function calculateDays() {
 function displayDaysCounter() {
     const counterElement = document.getElementById('daysCounter');
     const days = calculateDays();
-    counterElement.textContent = `${days} dias`;
+    counterElement.textContent = `${days} días`;
 }
 
 // Animate timeline items on scroll
@@ -24,9 +24,24 @@ function animateOnScroll() {
     });
 }
 
+// Toggle visibility of images when a timeline item is clicked
+function toggleImageVisibility() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    timelineItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Toggle the 'active' class to show/hide the image
+            item.classList.toggle('active');
+        });
+    });
+}
+
+// Call the functions when the page loads
 window.onload = () => {
     displayDaysCounter();
     animateOnScroll();
+    toggleImageVisibility();  // Enable image toggling functionality
 };
 
+// Scroll event for animating timeline items
 window.onscroll = animateOnScroll;
